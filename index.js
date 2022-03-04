@@ -5,7 +5,7 @@
 
 */
 
-const width = 600;
+const width = 350;
 const height = 500;
 let tree = [];
 let canvas, ctx;
@@ -66,8 +66,8 @@ function init() {
 function growTree(iterations, angle, length, variation) {
     tree = [];
     let branchWidth = 6.0;
-    let begin = new Vector(300,height);
-    let end = new Vector(300,height - rootLength);
+    let begin = new Vector(width / 2, height);
+    let end = new Vector(width / 2, height - rootLength);
     let root = new Branch(begin, end, branchWidth);
     tree.push(root);
     for (let i = 0; i < iterations; i++) { 
@@ -105,16 +105,5 @@ function animate() {
     }
     requestAnimationFrame(animate);
 }
-
-
-function invertAngle(angle) {
-    return (angle + Math.PI) % (2 * Math.PI);
-}
-
-function degreeToRadians(degree) {
-    return degree * (Math.PI / 180);
-}
-
-
 
 window.addEventListener('load', init);

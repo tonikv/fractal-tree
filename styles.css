@@ -11,7 +11,7 @@ body {
 
 .canvas {
     margin-top: 20px;
-    width: 600px;
+    width: 350px;
     height: 500px;
     background-color: black;
     border: 2px solid white;
@@ -25,7 +25,7 @@ body {
     align-items: center;
     border: 2px solid black;
     border-radius: 2px;
-    width: 600px;
+    width: 350px;
     color: white;
 }
 
@@ -44,7 +44,7 @@ body {
 .slider {
     -webkit-appearance: none;
     margin-right: 20px;
-    width: 200px;
+    width: 100px;
     height: 15px;
     border-radius: 5px;  
     background: #d3d3d3;
