@@ -7,16 +7,41 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Fractal Tree</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles.css">
-        <script src="index.js" async defer></script>
+        <script src="vector.js" defer></script>
+        <script src="tree.js" defer></script>
+        <script src="branch.js" defer></script>
     </head>
     <body>
         <div class="container">
-            <canvas id="myCanvas" class="canvas" width="600" height="400"></canvas>
+            <canvas id="myCanvas" class="canvas" width="600" height="600"></canvas>
+            <div class="sliders">
+                <div class="slidercontainer">
+                    <label class="labels" name="angle">Angle</label>
+                    <input type="range" min="1" max="45" value="35" default="35" class="slider" id="angle" name="angle" step="0.001">
+                    <label class="labels" name="len">Length</label>
+                    <input type="range" min="0" max="2" value="0.67" default="0.67" class="slider" id="len" name="len" step="0.001">
+                </div>
+                <div class="slidercontainer">
+                    <label class="labels" name="variation">Variation</label>
+                    <input type="range" min="0" max="20" value="0" default="0" class="slider" id="variation" name="variation" step="0.01">
+                </div>
+
+                <div class="slidercontainer">
+                    <label class="labels" name="iterations">Iterations</label>
+                    <input type="range" min="1" max="15" value="6" default="5" class="slider" id="iterations" name="Iterations" step="1">
+                </div>
+
+                <div class="slidercontainer">
+                    <label class="labels" name="rootLength">First Branch Length</label>
+                    <input type="range" min="1" max="150" value="100" default="100" class="slider" id="rootLength" name="rootLength" step="1">
+                </div>
+            </div>
         </div>
+        <script src="index.js" async defer></script>
     </body>
 </html>
