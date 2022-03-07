@@ -7,7 +7,7 @@
 */
 
 let screenWidth = screen.width - 20;
-let screenHeight = 400;
+let screenHeight = 350;
 let tree = [];
 let canvas, ctx;
 let len = 0.67;
@@ -60,7 +60,7 @@ function init() {
     canvas.width = screenWidth;
     canvas.height = screenHeight;
     ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, screenWidth, 400);
+    ctx.clearRect(0, 0, screenWidth, screenHeight);
     ctx.strokeStyle = 'rgba(255,255,255,1)'
     growTree(iterations, angle, len, variation);
     drawTree()
