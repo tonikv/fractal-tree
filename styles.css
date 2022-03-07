@@ -12,12 +12,8 @@ body {
 }
 
 .canvas {
-    margin-top: 20px;
-    width: 350px;
-    height: 500px;
+    margin-top: 10px;
     background-color: black;
-    border: 2px solid white;
-    border-radius: 2px;
 }
 
 .sliders {
@@ -25,21 +21,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
-    border-radius: 2px;
+    border: 2px solid white;
+    border-radius: 12px;
     width: 350px;
     color: white;
 }
 
 .labels {
-    padding: 0 5px 0 5px;
+    padding-left: 20px;
 }
 
 .slidercontainer {
     display: flex;
     flex-direction: row;
-    margin: 15px 15px 15px 15px;
-    padding: 0 10px 0 10px;
+    margin: 5px 5px 5px 5px;
+    padding: 0 10px 0 0px;
 }
 
 
@@ -47,9 +43,10 @@ body {
 
 .slider {
     -webkit-appearance: none;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-top: 8px;
     width: 100px;
-    height: 15px;
+    height: 8px;
     border-radius: 5px;
     background: #d3d3d3;
     outline: none;
@@ -69,11 +66,16 @@ body {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: #ff0e0e;
     cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    width: 20px;
+    height: 20px;
 }
 
 .slider::-moz-range-thumb {
