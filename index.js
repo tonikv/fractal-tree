@@ -7,9 +7,9 @@
 */
 
 let screenWidth = screen.width - 20;
-let screenHeight = 350;
+let screenHeight = screen.height;
 let tree = [];
-let canvas, ctx;
+let canvas, ctx, begin, end, root, branchWidth;
 let len = 0.67;
 let angle = 45;
 let variation = 0;
@@ -62,6 +62,10 @@ function init() {
     ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, screenWidth, screenHeight);
     ctx.strokeStyle = 'rgba(255,255,255,1)'
+    branchWidth = 6.0;
+    begin = new Vector(screenWidth / 2, screenHeight / 2);
+    end = new Vector(screenWidth / 2, screenHeight / 2 - rootLength);
+    root = new Branch(begin, end, branchWidth);
     growTree(iterations, angle, len, variation);
     drawTree()
 }
@@ -69,10 +73,10 @@ function init() {
 // Generate tree with user given values
 function growTree(iterations, angle, length, variation) {
     tree = [];
-    let branchWidth = 6.0;
-    let begin = new Vector(screenWidth / 2, screenHeight);
-    let end = new Vector(screenWidth / 2, screenHeight - rootLength);
-    let root = new Branch(begin, end, branchWidth);
+    branchWidth = 6.0;
+    begin = new Vector(screenWidth / 2, screenHeight / 2);
+    end = new Vector(screenWidth / 2, screenHeight / 2 - rootLength);
+    root = new Branch(begin, end, branchWidth);
     tree.push(root);
     for (let i = 0; i < iterations; i++) {
         for (let i = tree.length - 1; i >= 0; i--) {
@@ -85,7 +89,7 @@ function growTree(iterations, angle, length, variation) {
             if (branchWidth < 0.5) {
                 branchWidth = 1;
             } else {
-                branchWidth -= 0.05;
+                branchWidth -= 0.1;
             }
         }
     }

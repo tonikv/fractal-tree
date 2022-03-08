@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,11 +13,14 @@ body {
 }
 
 .canvas {
-    margin-top: 10px;
+    margin: auto auto;
+    position: absolute;
     background-color: black;
 }
 
 .sliders {
+    margin-top:126px;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
